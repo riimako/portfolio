@@ -1,3 +1,4 @@
+
 body {
   overflow: hidden;
 }
@@ -34,7 +35,7 @@ body {
   align-items: center;
 }
 
-.link:hover {
+.homeContainer .link:hover {
   letter-spacing: 0;
   color: #9BC4E2;
   font-size: 15.5vw;
@@ -61,3 +62,4 @@ body {
     background-color: black;
   }
 }
+
