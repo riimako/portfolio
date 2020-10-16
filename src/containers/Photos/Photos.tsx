@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './Photos.css';
 
+import Switch from '../../components/Switch/Switch';
+import GridPhotos from '../../components/GridPhotos/GridPhotos';
+import Slider from '../../components/Slider/Slider';
+
 const Photos = () => {
   const history = useHistory();
+  const [checked, setChecked] = useState(false);
   const images: Array<any> = [
     {
       id: 1,
@@ -44,15 +49,23 @@ const Photos = () => {
 
   ]
 
+  const handleClick = (value:boolean) => {
+    setChecked(value);
+  }
+
   return (
     <>
-    <div className="link" onClick={() => (history.push(''))}>HOME</div>
+    <div style={{display:'flex', alignItems:'center'}}>
+      <div className="link" onClick={() => (history.push(''))}>HOME</div>
+      <Switch onClick={handleClick} />
+    </div>
+    
     <div className="photosContainer">
-      <div className="photosWraper">
-          {images?.map(img => 
-            <img key={img.id} src={img.image} alt="" className="image" />
-          )}
-      </div>
+      {checked 
+        ? <GridPhotos images={images} />
+        : <Slider images={images} />
+      }
+     
     </div>
     </>
   )
