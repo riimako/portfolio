@@ -19,7 +19,7 @@ const Login = () => {
   };
   
   const login = async (user: UserLogin) => {
-    return await axios.post('http://localhost:8000/users/login', user);
+    return await axios.post('http://localhost:3002/login', user);
   } 
   
   const onSubmit = () => {
