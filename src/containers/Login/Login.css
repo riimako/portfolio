@@ -9,3 +9,17 @@
   align-items: center;
   padding: 10px;
 }
+
+.formContainer .item {
+  margin: 10px;
+}
+
+.formContainer .item #submit {
+  background-color: white;
+  border-color:#146e9b;
+  border-style: solid;
+  color:#146e9b;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+}

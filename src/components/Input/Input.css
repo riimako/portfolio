@@ -1,7 +1,3 @@
-.formContainer .item {
-  margin: 10px;
-}
-
 .formContainer .field {
   position: relative;
 }
@@ -37,14 +33,4 @@
   padding-right: 5px;
   font-size: 11px;
   color: #146e9b;
-}
-
-.formContainer .item #submit {
-  background-color: white;
-  border-color:#146e9b;
-  border-style: solid;
-  color:#146e9b;
-  width: 100px;
-  height: 30px;
-  border-radius: 15px;
 }
