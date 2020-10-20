@@ -1,13 +1,18 @@
 .formContainer .field {
   position: relative;
+  width: 100%;
 }
 
 .formContainer .field input {
-  height: 25px;
-  border-radius: 5px;
+  box-sizing: border-box;
+  height: 45px;
+  border-radius: 10px;
   border-color: #146e9b;
   border-style: solid;
-  color: #0198E1
+  color: #146e9b;
+  font-weight: bold;
+  padding-left: 10px;
+  width: 100%;
 }
 
 .formContainer .field.error input {
@@ -20,7 +25,7 @@
 
 .formContainer .item div.error {
   text-align: right;
-  font-size: 9px;
+  font-size: 10px;
   color: red;
 }
 
@@ -31,6 +36,14 @@
   background-color: white;
   padding-left: 5px;
   padding-right: 5px;
-  font-size: 11px;
+  font-size: 13px;
   color: #146e9b;
+}
+
+.formContainer .eye {
+  position: absolute;
+  top: 10px;
+  right: 13px;
+  width: 26px;
+  cursor: pointer;
 }
