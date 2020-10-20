@@ -1,4 +1,9 @@
-export const images: Array<any> = [
+interface IImage {
+  id: number, 
+  image: string
+}
+
+export const images: Array<IImage> = [
   {
     id: 1,
     image: "image-default-1.jpg"
