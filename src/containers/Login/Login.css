@@ -4,22 +4,33 @@
 }
 
 .formContainer form {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  width: 220px;
 }
 
 .formContainer .item {
-  margin: 10px;
+  margin: 15px;
+  height: 40px;
+  width: 100%;
 }
 
 .formContainer .item #submit {
   background-color: white;
   border-color:#146e9b;
+  border-radius: 15px;
   border-style: solid;
   color:#146e9b;
-  width: 100px;
-  height: 30px;
-  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formContainer .item #submit:hover {
+  background-color: #146e9b;
+  color: white;
 }
