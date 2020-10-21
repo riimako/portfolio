@@ -1,15 +1,15 @@
-
 body {
   overflow: hidden;
 }
 
 .homeContainer {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   min-height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 
 .links {
@@ -17,8 +17,7 @@ body {
   font-weight: 100;
   display: flex;
   justify-content: center;
-  overflow: hidden;
-  color: #0198E1;
+  color: #0198e1;
 }
 
 .links:hover {
@@ -26,9 +25,9 @@ body {
 }
 
 .link {
-  letter-spacing: -0.1em;
+  letter-spacing: -0.05em;
   margin: 10px 50px;
-  transition: letter-spacing 0.3s ease;
+  transition: letter-spacing 0.5s ease;
   cursor: pointer;
   font-weight: bold;
   display: flex;
@@ -37,7 +36,7 @@ body {
 
 .homeContainer .link:hover {
   letter-spacing: 0;
-  color: #9BC4E2;
+  color: #9bc4e2;
   font-size: 15.5vw;
 }
 
@@ -62,4 +61,3 @@ body {
     background-color: black;
   }
 }
-
