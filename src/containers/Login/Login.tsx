@@ -12,7 +12,7 @@ interface UserLogin {
 
 const Login = () => {
   const [user, setUser] = useState({username: "", password: ""})
-  const { register, handleSubmit, errors } = useForm<UserLogin>();
+  const { register, handleSubmit, formState:{errors} } = useForm<UserLogin>();
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUser({...user, [e.target.name]: e.target.value});

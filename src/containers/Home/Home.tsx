@@ -1,11 +1,11 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 import useMouse from "@react-hook/mouse-position";
 
 const Home = () => {
-  const history = useHistory();
+  const history = useNavigate();
   const verticalMode = window.innerWidth > 1000 ? true : false;
   const ref = React.useRef(null);
   const mouse = useMouse(ref, {
@@ -22,15 +22,15 @@ const Home = () => {
   return (
     <div className="homeContainer">
       <div className="links" ref={ref} style={verticalMode ? moveMouse : {}}>
-        <div className="link" onClick={() => history.push("/photos")}>
-          PHOTOS
+        <div className="link" onClick={() => history("/blog")}>
+          BLOG
         </div>
         <div className="divider">{verticalMode ? "-" : ""}</div>
-        <div className="link" onClick={() => history.push("/work")}>
+        <div className="link" onClick={() => history("/work")}>
           WORK
         </div>
         <div className="divider">{verticalMode ? "-" : ""}</div>
-        <div className="link" onClick={() => history.push("/contact")}>
+        <div className="link" onClick={() => history("/contact")}>
           CONTACT
         </div>
       </div>
