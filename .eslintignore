@@ -1,3 +1,5 @@
 mdx-components.js
 next.config.js
 .eslintrc.js
+tailwind.config.js
+postcss.config.js
