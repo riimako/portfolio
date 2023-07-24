@@ -1,17 +1,18 @@
+"use client";
 import React from "react";
 import "./Home.css";
 
 import useMouse from "@react-hook/mouse-position";
 
-const Home = () => {
-  const verticalMode = window.innerWidth > 1000 ? true : false;
+const HomeWidget = () => {
+  const verticalMode = window?.innerWidth > 1000 ? true : false;
   const ref = React.useRef(null);
   const mouse = useMouse(ref, {
     enterDelay: 100,
     leaveDelay: 100,
   });
   const mW: number =
-    mouse.x != null ? (mouse.x * 100) / window.innerWidth - 50 : 0;
+    mouse.x != null ? (mouse.x * 100) / window?.innerWidth - 50 : 0;
 
   const moveMouse = {
     transform: "translateX(" + -mW / 2 + "%)",
@@ -31,4 +32,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeWidget;
