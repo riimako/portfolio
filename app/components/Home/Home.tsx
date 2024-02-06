@@ -5,7 +5,11 @@ import "./Home.css";
 import useMouse from "@react-hook/mouse-position";
 
 const HomeWidget = () => {
-  const verticalMode = window?.innerWidth > 1000 ? true : false;
+  let verticalMode = true;
+  if (typeof window !== "undefined") {
+    verticalMode = window?.innerWidth > 1000 ? true : false;
+  }
+
   const ref = React.useRef(null);
   const mouse = useMouse(ref, {
     enterDelay: 100,
